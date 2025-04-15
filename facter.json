@@ -1010,7 +1010,7 @@
           {
             "type": "mem",
             "base": 0,
-            "range": 8331128832,
+            "range": 8331137024,
             "enabled": true,
             "access": "read_write",
             "prefetch": "unknown"
@@ -1200,6 +1200,29 @@
     "network_interface": [
       {
         "index": 25,
+        "attached_to": 0,
+        "class_list": [
+          "network_interface"
+        ],
+        "base_class": {
+          "hex": "0107",
+          "name": "Network Interface",
+          "value": 263
+        },
+        "sub_class": {
+          "hex": "0000",
+          "name": "Loopback",
+          "value": 0
+        },
+        "model": "Loopback network interface",
+        "sysfs_id": "/class/net/lo",
+        "unix_device_name": "lo",
+        "unix_device_names": [
+          "lo"
+        ]
+      },
+      {
+        "index": 26,
         "attached_to": 20,
         "class_list": [
           "network_interface"
@@ -1238,29 +1261,6 @@
         ],
         "driver_modules": [
           "virtio_net"
-        ]
-      },
-      {
-        "index": 26,
-        "attached_to": 0,
-        "class_list": [
-          "network_interface"
-        ],
-        "base_class": {
-          "hex": "0107",
-          "name": "Network Interface",
-          "value": 263
-        },
-        "sub_class": {
-          "hex": "0000",
-          "name": "Loopback",
-          "value": 0
-        },
-        "model": "Loopback network interface",
-        "sysfs_id": "/class/net/lo",
-        "unix_device_name": "lo",
-        "unix_device_names": [
-          "lo"
         ]
       }
     ],
