@@ -40,7 +40,7 @@
       deploy.nodes.server = {
         hostname = "mc.nasirk.ca";
         sshUser = "root";
-        sshOpts = [ "-i" "/home/nasir/.ssh/server" ]; # or use ssh-agent
+        sshOpts = [ "-i" "~/.ssh/server" ]; # or use ssh-agent
         profiles.server = {
           user = "root";
           magicRollback = false;
