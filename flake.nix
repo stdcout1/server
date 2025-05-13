@@ -5,7 +5,7 @@
   inputs.nixos-facter-modules.url = "github:numtide/nixos-facter-modules";
   inputs.deploy-rs.url = "github:serokell/deploy-rs";
   inputs.easyshort.url = "github:stdcout1/easyshort";
-  inputs.qmovie.url = "github:stdcout1/qmovie/deployments";
+  inputs.qmovie.url = "github:stdcout1/qmovie";
 
 
   outputs =
