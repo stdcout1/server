@@ -409,11 +409,11 @@
         "systems": "systems_3"
       },
       "locked": {
-        "lastModified": 1747162037,
-        "narHash": "sha256-qK/e7rr7P6pgOL7yzi8Bc6QpMAaLfDRoKUvLq+Wuuk8=",
+        "lastModified": 1747163998,
+        "narHash": "sha256-Lu1kEJffn7P0XzY4XKQsb0ChKia5SsmF+xVb1Ck10AQ=",
         "owner": "stdcout1",
         "repo": "qmovie",
-        "rev": "2530d9da6af54bfddadc7b04aec2bf93a754bf84",
+        "rev": "cf4d9259ac786aac6ae40ff3f97aba247e78baf4",
         "type": "github"
       },
       "original": {
