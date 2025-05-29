@@ -10,6 +10,7 @@
     ./disk-config.nix
     ./apps/easyshort.nix
     ./apps/qmovie.nix
+    ./apps/minecraft.nix
   ];
   boot.loader.grub = {
     # no need to set devices, disko will add all devices that have a EF02 partition to the list already
