@@ -2,7 +2,7 @@
 let
   modpack = pkgs.fetchPackwizModpack {
     url = "https://raw.githubusercontent.com/stdcout1/minecraft-modpack/refs/heads/main/pack.toml";
-    packHash = "sha256-/WVfLaXL5jXzLZEj4ZWXJScjBlDeDQU2pStLzWqNBIw=";
+    packHash = "sha256-673FyhzDKh6t4bTSK5Exg7KjvFuMePwdTQrsbPeravM=";
   };
   neoforgeServer =
     let
@@ -11,15 +11,15 @@ let
         pname = "neoforge-installer";
         inherit version;
         url = "https://maven.neoforged.net/releases/net/neoforged/neoforge/${version}/neoforge-${version}-installer.jar";
-        hash = "sha256-QfJ7zph0/bUQQOt2yomDDEng3QvkJhqdq7qzzXyfFoc=";
+        hash = "sha256-msilqkXu1EcG3YwZxsYehi18OPOzh/wGCbk9C6x9rF4=";
       };
       java = "${pkgs.jdk21}/bin/java";
     in
     pkgs.writeShellScriptBin "server" ''
-      if ! [ -e "neoforge-${version}.jar" ]; then
+      if ! [ -e "./libraries/net/neoforged/neoforge/${version}/unix_args.txt" ]; then
         ${java} -jar ${installer} --installServer
       fi
-      exec ${java} $@ -jar forge-${version}.jar nogui
+      exec ${java} $@ @libraries/net/neoforged/neoforge/${version}/unix_args.txt nogui 
     '';
 in
 {
@@ -38,7 +38,7 @@ in
   services.minecraft-servers.servers.cool-modpack = {
     enable = true;
     package = neoforgeServer;
-    jvmOpts = "-Xmx8G -Xms8G";
+    jvmOpts = "-Xmx6G -Xms6G";
     serverProperties = {
       level-type = "biomesoplenty";
       difficulty = "normal";
