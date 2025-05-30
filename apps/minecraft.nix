@@ -7,7 +7,7 @@ let
 
   atm9 = pkgs.fetchzip {
     url = "https://www.curseforge.com/api/v1/mods/715572/files/6451435/download";
-    hash = "";
+    hash = "sha256-qh0FjTjabGbujkEWNpLQU6BMMiJhCDWoh34ZHGHyYkg=";
     extension = "zip";
     stripRoot = true;
   };
