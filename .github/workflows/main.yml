@@ -30,4 +30,4 @@ jobs:
         
     - name: Deploy with deploy-rs
       run: |
-        nix run github:serokell/deploy-rs -- .#${PROFILE}
+        cachix watch-exec nasirserver -- nix run github:serokell/deploy-rs -- .#${PROFILE}
