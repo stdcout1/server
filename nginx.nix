@@ -14,15 +14,6 @@
         };
       };
 
-      "mc.nasirk.ca" = {
-        enableACME = true;
-        forceSSL = true;
-
-        locations."/" = {
-          proxyPass = "http://localhost:25565";
-        };
-      };
-
       "qmovie.nasirk.ca" = {
         enableACME = true;
         forceSSL = true;
@@ -44,7 +35,7 @@
     };
   };
 
-  networking.firewall.allowedTCPPorts = [ 80 443 3000 3001 ]; # Allow HTTP/S
+  networking.firewall.allowedTCPPorts = [ 80 443 3000 3001 25565 ]; # Allow HTTP/S
   security.acme.acceptTerms = true;
   security.acme.defaults.email = "nasir@nasirk.ca";
 }
