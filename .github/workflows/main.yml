@@ -27,7 +27,12 @@ jobs:
         echo "${{ secrets.DEPLOY_KEY }}" > ~/.ssh/server
         chmod 600 ~/.ssh/server
         ssh-keyscan -H "$SERVER_HOST" >> ~/.ssh/known_hosts
-        
-    - name: Deploy with deploy-rs
+
+    - name: Pre-build to ensure everything is cached
       run: |
-        cachix watch-exec nasirserver -- nix run github:serokell/deploy-rs -- .#${PROFILE}
+        nix build .#nixosConfigurations.generic-nixos-facter.config.system.build.toplevel
+
+    - name: Deploy (uses cached outputs)
+      run: |
+        nix run github:serokell/deploy-rs -- .#server
+        
