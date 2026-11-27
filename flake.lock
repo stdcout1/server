@@ -960,11 +960,11 @@
         "systems": "systems_6"
       },
       "locked": {
-        "lastModified": 1795656270,
-        "narHash": "sha256-5Dish8Uhav4cOsrUlcFCbjYtbLSAkOMU8wf1+8/UjnI=",
+        "lastModified": 1795792063,
+        "narHash": "sha256-7utgPfSfsZvNHg3Fm2Ht95QIQ0GDABbLAX/LT6RF6Uk=",
         "owner": "stdcout1",
         "repo": "tarkeebtool",
-        "rev": "2a57001bc7973ba8bcc00fd084678bf2a513c8a0",
+        "rev": "c9b78620123796f51c0692a32ed61d3ecbdbd8f1",
         "type": "github"
       },
       "original": {
