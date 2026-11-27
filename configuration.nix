@@ -10,6 +10,7 @@
     ./disk-config.nix
     ./apps/easyshort.nix
     ./apps/qmovie.nix
+    ./apps/tarkeeb.nix
     ./apps/minecraft.nix
   ];
 

@@ -4,7 +4,12 @@ on:
     branches:
       - master
   workflow_dispatch:
-  
+
+# Several app repos push lock bumps here; one deploy-rs run at a time, the newest queued last.
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
