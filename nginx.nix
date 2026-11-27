@@ -35,7 +35,7 @@
     };
   };
 
-  networking.firewall.allowedTCPPorts = [ 80 443 3000 3001 25565 ]; # Allow HTTP/S
+  networking.firewall.allowedTCPPorts = [ 80 443 3000 3001 ]; # Allow HTTP/S (add 25565 back with Minecraft)
   security.acme.acceptTerms = true;
   security.acme.defaults.email = "nasir@nasirk.ca";
 }

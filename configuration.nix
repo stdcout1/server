@@ -11,7 +11,8 @@
     ./apps/easyshort.nix
     ./apps/qmovie.nix
     ./apps/tarkeeb.nix
-    ./apps/minecraft.nix
+    # Minecraft is off; uncomment to bring it back (its world data is still on disk).
+    # ./apps/minecraft.nix
   ];
 
   nix.settings = {
